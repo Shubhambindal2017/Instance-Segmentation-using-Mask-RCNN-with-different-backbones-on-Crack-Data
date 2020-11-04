@@ -35,8 +35,11 @@ To build our new model I need a dataset first. So, found and processed a new dat
 
 So, Now  have a model. The world can't wait to use our new Mask R-CNN model! But how can the world interface with our model? We need an API!
 
-Build a simple REST API with `flask. An API user is able to post an image to our API and receive the image with drawn mask and the percentage between masks and unmasked pixels.
+Build a simple REST API with flask. An API user is able to post an image to our API and receive the image with drawn mask and the percentage between masks and unmasked pixels.
 
+Example :
+    
+   ![Input](task_2/output_samples_of_api/output_sample_2.png)
 ---
 
 ### Task 3. Modify the network

@@ -47,8 +47,9 @@ I have read that MobileNet [is extremely fast, while still remarkably accurate](
 
 The task is to use MobileNet with Mask R-CNN. Compare the performance briefly.
 
+---
 
-#### Author   - Shubham Bindal
-#### Email-id - shubhambindal610@gmail.com (you may contact for any query) 
+##### Author   - Shubham Bindal
+##### Email-id - shubhambindal610@gmail.com (you may contact for any query) 
 
 

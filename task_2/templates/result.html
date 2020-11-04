@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        .column {
+            float: left;
+            width: 45%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body class="row">
+    {% if results %}
+    <div class="column">
+        <h1>Input</h1>
+        <img src="/static/{{results[0]}}">
+    </div>
+    <div class="column">
+        <h1>Output</h1>
+        <img src="/static/{{results[1]}}">
+        <p>{{ results[2] }}</p>
+    </div>
+    {% else %}
+    No results :(
+    {% endif %}
+
+</body>
+
+</html>

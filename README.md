@@ -4,16 +4,14 @@
 
 **[Dataset used, can be found here](https://drive.google.com/file/d/1xrOqv0-3uMHjZyEUrerOYiYXW_E8SUMP/view?usp=sharing)**
 
-The data is not in the form which is required for the MASK-RCNN, so for a input image, only a combined mask image of cracks is given. I also found that the mask images needs some pre-processing as some of them, seems to contain some noise. So **inspect_and_make_the_data_ready.ipynb** is about this how, I handled the given data, and made it compatible to use it for the MASK-RCNN. 
+The data is not in the form which is required for the MASK-RCNN, so for an input image, only a combined mask image of cracks is given. I also found that the mask images need some pre-processing as some of them, seem to contain some noise. So inspect_and_make_the_data_ready.ipynb is about this how, I handled the given data, and made it compatible to use it for the Mask-RCNN.
 
-In intial phase, I assumed that in a image there can be only one bounding box and one mask (which is combined one), even if there are more than 1 diff patches of cracks in  different regions, both will be bound by with only one bounding box and be included in same mask (which is the combined mask).
+In the initial phase, I assumed that in an image there can be only one bounding box and one mask (which is a combined one), even if there are more than 1 diff patches of cracks in different regions, both will be bound by with only one bounding box and be included in the same mask (which is the combined mask).
 
-Then I worked on how to pre-process and remove the noise from the masks and how to get different masks/bounding boxes for different cracks in different portions of image
-1- I did opening and closing on the thresholded mask to remove the noise from the mask.
-2- I used the concepts of connected components to gets different masks/bounding boxes for different cracks in different positions of image
-**I checked the validity of these steps after trying different techniques, on 4-6 different images which I think can cover the space of whole dataset (just by visualizing) :).**
+Then I worked on how to pre-process and remove the noise from the masks and how to get different masks/bounding boxes for different cracks in different portions of image 1- I did opening and closing on the thresholded mask to remove the noise from the mask. 2- I used the concepts of connected components to gets different masks/bounding boxes for different cracks in different positions of the image 
+**I checked the validity of these steps after trying different techniques, on 4-6 different images which I think can cover the space of the whole dataset (just by visualizing) :).**
 
-I then pushed final CrackDataset class with remove_noise_and_get_masks and get_thresholded_masks to **CrackDataset_with_its_utils.py** to use further for the MASK-RCNN
+I then pushed the final CrackDataset class with remove_noise_and_get_masks and get_thresholded_masks to CrackDataset_with_its_utils.py to use further for the MASK-RCNN.
 
 **3 Different task folders contains respective codes and their documentation** 
 
